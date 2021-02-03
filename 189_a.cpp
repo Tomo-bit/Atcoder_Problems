@@ -10,3 +10,5 @@ int main(){
   else {
   	cout << "Lost" << endl;}
 }
+
+

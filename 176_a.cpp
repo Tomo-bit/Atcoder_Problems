@@ -11,3 +11,4 @@ int main(){
         cout << n/x*t + t << endl;
     }
 }
+
