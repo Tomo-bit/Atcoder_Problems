@@ -10,4 +10,3 @@ using namespace std;
          cout << "Odd" << endl;
      }
  }
-
