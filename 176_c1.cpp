@@ -14,5 +14,4 @@ int main()
         m = max(m,a[i]);
         ans += m-a[i];
 }
-cout << ans << endl;
-}
+cout << ans << endl;}
