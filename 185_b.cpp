@@ -43,5 +43,4 @@ int main()
         cout << "No" << endl;
         return 0;
     }
-    cout << "Yes" << endl;
-}
+    cout << "Yes" << endl;}
