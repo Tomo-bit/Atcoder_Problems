@@ -20,4 +20,4 @@ int main()
     long long ans = (a - b - b + c) % d;
     cout << a << endl;
 }
-/*aの階乗の計算に難あり
+/*aの階乗の計算に難あり*/
