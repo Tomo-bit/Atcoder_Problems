@@ -5,4 +5,5 @@ int main()
 { /*文字列の数*/
     string str = "abc";
     cout << str.length() << endl;
+    /*オーバーフローを疑う(long long にする)*/
 }
