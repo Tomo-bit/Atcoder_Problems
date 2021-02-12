@@ -12,7 +12,7 @@ int main()
         cin >> a[i];
     }
     sort(a.begin(), a.end());
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i < n; i++
     {
         ans += i * a[i] - (n - i) * a[i - 1];
     }
