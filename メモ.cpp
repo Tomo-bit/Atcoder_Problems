@@ -2,7 +2,11 @@
 using namespace std;
 
 int main()
-{ /*文字数取得*/
+{
+    for (int i = 0; i < n; i++)
+    {
+    }
+    /*文字数取得*/
     string str = "abc";
     cout << str.length() << endl;
     /*オーバーフローを疑う(long long にする)*/
