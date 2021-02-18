@@ -6,7 +6,6 @@ using P = pair<int, int>;
 
 int main()
 
-    int main()
 {
     int n;
     for (int i = 0; i < n; i++)
