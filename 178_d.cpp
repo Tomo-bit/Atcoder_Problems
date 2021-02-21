@@ -6,7 +6,14 @@ using P = pair<int, int>;
 
 int main()
 {
-    int s;
+    int s, a[2010];
+    int mod = 1000000007;
     cin >> s;
-    vector<ll> p;
+    a[0] = 1;
+    a[1] = a[2] = 0;
+    for (int i = 3; i <= s; i++)
+    {
+        a[i] = (a[i - 1] + a[i - 3]) % mod;
+    }
+    cout << a[s] << endl;
 }

@@ -6,54 +6,31 @@ using P = pair<int, int>;
 
 int main()
 {
-    ll n, m, k;
+    int n, m, k;
     cin >> n >> m >> k;
-    vector<ll> a(n);
-    vector<ll> b(m);
-    rep(i, n)
+    vector<int> a(n);
+    vector<int> b(m);
+    rep(i, n) cin >> a[i];
+    rep(i, m) cin >> b[i];
+
+    ll t = 0;
+    rep(i, m) t += b[i];
+
+    int j = m;
+    int ans = 0;
+    rep(i, n + 1)
     {
-        cin >> a[i];
-    }
-    rep(i, m)
-    {
-        cin >> b[i];
-    }
-    ll time = 0;
-    ll i = 0, j = 0, ans = 0;
-    while (time <= k && i <= n - 1 && j <= m - 1)
-    {
-        if (a[i] < b[j])
+        while (j > 0 && t > k)
         {
-            time += a[i];
-            i++;
+            --j;
+            t -= b[j];
         }
-        else
-        {
-            time += b[j];
-            j++;
-        }
-        ans++;
+        if (t > k)
+            break;
+        ans = max(ans, i + j);
+        if (i == n)
+            break;
+        t += a[i];
     }
-    if (time <= k && i <= n - 1)
-    {
-        ans--;
-    }
-    while (time <= k && i <= n - 1)
-    {
-        time += a[i];
-        i++;
-        ans++;
-    }
-    if (time <= k && j <= m - 1)
-    {
-        ans--;
-    }
-    while (time <= k && j <= m - 1)
-    {
-        time += b[j];
-        j++;
-        ans++;
-    }
-    ans--;
     cout << ans << endl;
 }
