@@ -19,4 +19,5 @@ int main()
     /* 計算回数は1秒あたり10^8回程度*/
     /*swap(s[0],s[1])で入れ替え*/
     /*stoi(s)で文字列を数字に変換*/
+    /*小数点以下は明示的に記述する(cout << std::fixed << std::setprecision(15) << ans << endl;)*/
 }
