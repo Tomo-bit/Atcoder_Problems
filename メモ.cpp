@@ -20,4 +20,7 @@ int main()
     /*swap(s[0],s[1])で入れ替え*/
     /*stoi(s)で文字列を数字に変換*/
     /*小数点以下は明示的に記述する(cout << std::fixed << std::setprecision(15) << ans << endl;)*/
+    /*atanよりatan2の方が精度が良い（多分）*/
+    /*string(1, 'a' + n % 26);これでcharの足し算をした上で文字列に変換できる
+    理由はわからん(cf:abc_171_c)*/
 }
