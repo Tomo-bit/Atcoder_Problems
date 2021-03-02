@@ -4,6 +4,17 @@ using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
+string f(ll n)
+{
+    if (n == 0)
+        return "";
+    n--;
+    return f(n / 26) + string(1, 'a' + n % 26);
+}
+
 int main()
 {
+    ll n;
+    cin >> n;
+    cout << f(n) << endl;
 }
