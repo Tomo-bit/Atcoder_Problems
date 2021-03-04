@@ -14,7 +14,7 @@ bool IsPrime(ll num)
         return false; // 偶数はあらかじめ除く
 
     double sqrtNum = sqrt(num);
-    for (int i = 3; i <= sqrtNum; i += 2)
+    for (ll i = 3; i <= sqrtNum; i += 2)
     {
         if (num % i == 0)
         {
@@ -33,23 +33,31 @@ int main()
     cin >> n;
     ll m = n;
     ll ans = 0;
-
+    if (n == 1)
+    {
+        cout << 0 << endl;
+        return 0;
+    }
+    if (IsPrime(n))
+    {
+        cout << 1 << endl;
+        return 0;
+    }
     for (ll i = 2; i <= sqrt(m); i++)
     {
         if (IsPrime(i))
         {
-            int k = i;
-            while (n % k == 0)
+            ll k = i;
+            if (n % k == 0)
             {
-                if (n % k == 0)
+                while (n % k == 0)
                 {
                     n /= k;
                     ans++;
-                    k *= i;
+                    k = k * i;
                 }
             }
         }
     }
-
     cout << ans << endl;
 }
