@@ -8,14 +8,14 @@ int main()
 {
     ll n;
     cin >> n;
-    for (int i = 1; i <= sqrt(n); i++)
+    for (ll i = -200; i <= 200; i++)
     {
-        ll m = n + i * i * i * i * i;
-        for (int j = 1; j <= sqrt(m); j++)
+        for (ll j = -200; j <= 200; j++)
         {
-            if (m == j * j * j * j * j)
+            if (i * i * i * i * i - j * j * j * j * j == n)
             {
-                cout << j << " " << i << endl;
+                cout << i << " " << j << endl;
+                return 0;
             }
         }
     }
