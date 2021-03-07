@@ -14,15 +14,16 @@ int main()
     int ans = 0;
     for (int i = 0; i < n - 2; i++)
     {
-        for (int j = 1; j < n - 1; j++)
+        for (int j = i + 1; j < n - 1; j++)
         {
             int ab = l[i] + l[j];
-            int w = upper_bound(l.begin(), l.end(), ab) - l.begin();
+            int w = lower_bound(l.begin(), l.end(), ab) - l.begin();
             if (w == n)
+            {
+                ans += n - j - 1;
                 continue;
-
-            int k = j + 1;
-            ans += max(0, w - k);
+            }
+            ans += max(0, w - j - 1);
         }
     }
     cout << ans << endl;
