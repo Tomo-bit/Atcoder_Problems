@@ -8,12 +8,8 @@ int main()
 {
     int a, b, w;
     cin >> a >> b >> w;
-    int max = (w * 1000 + a - 1) / a;
-    if ((w * 1000) % a != 0)
-        max--;
-    int min = w * 1000 / b;
-    if ((w * 1000) % b != 0)
-        min++;
+    int max = w * 1000 / a;
+    int min = (w * 1000 + b - 1) / b;
     if (max < min)
     {
         cout << "UNSATISFIABLE" << endl;
