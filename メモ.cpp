@@ -2,7 +2,6 @@
 #define rep(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 using ll = long long;
-using P = pair<int, int>;
 
 int main()
 
@@ -10,7 +9,7 @@ int main()
     int n;
     for (int i = 0; i < n; i++)
     {
-    }
+}
     /*文字数取得*/
     string str = "abc";
     cout << str.length() << endl;
