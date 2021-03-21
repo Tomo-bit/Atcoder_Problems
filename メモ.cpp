@@ -9,7 +9,7 @@ int main()
     int n;
     for (int i = 0; i < n; i++)
     {
-}
+    }
     /*文字数取得*/
     string str = "abc";
     cout << str.length() << endl;
@@ -18,6 +18,7 @@ int main()
     /* 計算回数は1秒あたり10^8回程度*/
     /*swap(s[0],s[1])で入れ替え*/
     /*stoi(s)で文字列を数字に変換*/
+    /*文字列が長いときはstollを使う*/
     /*小数点以下は明示的に記述する(cout << std::fixed << std::setprecision(15) << ans << endl;)*/
     /*atanよりatan2の方が精度が良い（多分）*/
     /*string(1, 'a' + n % 26);これでcharの足し算をした上で文字列に変換できる
