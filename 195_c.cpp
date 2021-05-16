@@ -7,7 +7,7 @@ using P = pair<int, int>;
 int main()
 {
     string n;
-    cin >> n;
+    n = "1010";
     ll ans = 0;
     ll x = stoll(n);
     int size = n.size();
