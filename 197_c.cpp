@@ -9,13 +9,22 @@ int main()
     cin >> n;
     vector<ll> a(n);
     rep(i, n) cin >> a[i];
-    rep(is, 1 << n)
+    int ans = 1 << 30;
+    rep(s, 1 << (n - 1))
     {
-        rep(i, h)
+        int now = 0;
+        int o = 0;
+        rep(i, n)
         {
-            if (is >> i & 1 && is >> (i - 1) & 1)
+            o |= a[i];
+            if (s >> i & 1)
             {
+                now ^= o;
+                o = 0;
             }
         }
+        now ^= o;
+        ans = min(ans, now);
     }
+    cout << ans << endl;
 }

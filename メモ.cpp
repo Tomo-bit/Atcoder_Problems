@@ -2,6 +2,7 @@
 #define rep(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 using ll = long long;
+const int mod = 1000000007;
 
 int main()
 {
@@ -22,5 +23,5 @@ int main()
     /*atanよりatan2の方が精度が良い（多分）*/
     /*string(1, 'a' + n % 26);これでcharの足し算をした上で文字列に変換できる
     理由はわからん(cf:abc_171_c)*/
-    /*stingの足し算は+=をつかうと計算量が違う(+=の方が計算量が少ない)*/
+    /*stringの足し算は+=をつかうと計算量が違う(+=の方が計算量が少ない)*/
 }
